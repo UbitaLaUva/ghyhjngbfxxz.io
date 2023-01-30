@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UbitaScript</title>
     <link rel="stylesheet" href="bootstrap.css" />
-    <script src="copy.js"></script>
+    <script >
+        function copyLabelText() {
+    var labelText = document.getElementById("keyid").innerText;
+    navigator.clipboard.writeText(labelText).then(function() {
+      console.log('Label text copied to clipboard');
+    }, function(err) {
+      console.error('Could not copy label text: ', err);
+    });
+  }
+    </script>
   </head>
   <body style="text-align: center">
     <div class="container">
@@ -37,4 +46,5 @@
     </div>
   </body>
 </html>
+
 
